@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">TED_APP_2</string>
+    
+    <!-- Page de sélection de création de compte -->
+    <string name="new_account_title">Création de compte</string>
+    <string name="manual_fill_button">Remplir le formulaire manuellement</string>
+    
+    <!-- Page de création de compte manuelle -->
+    <string name="last_name">Nom</string>
+    <string name="first_name">Prénom</string>
+    <string name="email">Email</string>
+    <string name="address">Adresse</string>
+    <string name="zip_code">Code postal</string>
+    <string name="city">Ville</string>
+    <string name="card_ref">Carte</string>
+    <string name="create_button">Créer</string>
+
+    <!-- Page d'accueil -->
+    <string name="map">Carte</string>
+    <string name="offers">Offres</string>
+    <string name="stores">Magasins</string>
+</resources>
