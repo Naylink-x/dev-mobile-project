@@ -26,15 +26,16 @@
             android:orientation="vertical">
 
 
-            <Button
+            <ImageButton
                 android:id="@+id/button_qrcode_scan"
                 style="@style/ButtonLandingPage"
-                android:text=""/>
+                android:src="@drawable/ted_app_qrcode"
+                android:contentDescription="@string/image_description" />
             <Button
                 android:id="@+id/button_fill_manually"
                 android:layout_marginTop="20dp"
                 style="@style/ButtonLandingPage"
-                android:text="@string/manual_fill_button"/>
+                android:text="@string/manual_fill_button" />
 
         </LinearLayout>
     </ScrollView>

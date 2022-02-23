@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!-- TODO: changer logo "back" -->
     <include
         android:id="@+id/include"
         layout="@layout/layout_header"
@@ -21,77 +20,84 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/textViewAccountLastName"
+                android:id="@+id/editTextAccountLastName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
                 android:layout_marginHorizontal="20dp"
                 android:textSize="14sp"
+                android:inputType="none"
                 android:hint="@string/last_name"
                 android:autofillHints="lastName"/>
 
             <EditText
-                android:id="@+id/textViewAccountFirstName"
+                android:id="@+id/editTextAccountFirstName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginHorizontal="20dp"
                 android:textSize="14sp"
+                android:inputType="none"
                 android:hint="@string/first_name"
                 android:autofillHints="firstName"/>
 
             <EditText
-                android:id="@+id/textViewAccountEmail"
+                android:id="@+id/editTextAccountEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginHorizontal="20dp"
                 android:textSize="14sp"
+                android:inputType="textEmailAddress"
                 android:hint="@string/email"
                 android:autofillHints="emailAddress"/>
 
             <EditText
-                android:id="@+id/textViewAccountAddress"
+                android:id="@+id/editTextAccountAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginHorizontal="20dp"
                 android:textSize="14sp"
+                android:inputType="none"
                 android:hint="@string/address"
-                android:autofillHints="postalAddress"/>
+                android:autofillHints="address"/>
 
             <EditText
-                android:id="@+id/textViewAccountZipCode"
+                android:id="@+id/editTextAccountZipCode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginHorizontal="20dp"
                 android:textSize="14sp"
+                android:inputType="phone"
                 android:hint="@string/zip_code"
                 android:autofillHints="zipCode"/>
 
             <EditText
-                android:id="@+id/textViewAccountCity"
+                android:id="@+id/editTextAccountCity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginHorizontal="20dp"
                 android:textSize="14sp"
+                android:inputType="none"
                 android:hint="@string/city"
                 android:autofillHints="city"/>
 
             <EditText
-                android:id="@+id/textViewAccountCardRef"
+                android:id="@+id/editTextAccountCardRef"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginHorizontal="20dp"
                 android:textSize="14sp"
+                android:inputType="none"
                 android:hint="@string/card_ref"
                 android:autofillHints="cardRef"/>
 
             <Button
-                android:id="@+id/button_create_account"
+                android:id="@+id/buttonCreateAccount"
                 android:layout_marginTop="40dp"
                 android:text="@string/create_button"
                 style="@style/ButtonCreateAccount"/>
