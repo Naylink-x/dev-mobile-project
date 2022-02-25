@@ -1,6 +1,7 @@
 package fr.epsi.ted_app_2
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.PersistableBundle
@@ -28,14 +29,6 @@ class AccountCreationActivity: BaseActivity() {
 
         val account = intent.getSerializableExtra("accountObject") as Account?
 
-        /*val lastName = intent.getStringExtra("lastName")
-        val firstName = intent.getStringExtra("firstName")
-        val email = intent.getStringExtra("email")
-        val address = intent.getStringExtra("address")
-        val zipCode = intent.getStringExtra("zipCode")
-        val city = intent.getStringExtra("city")
-        val cardRef = intent.getStringExtra("cardRef")*/
-
         lastNameAccount.setText(account?.lastName)
         firstNameAccount.setText(account?.firstName)
         emailAccount.setText(account?.email)
@@ -59,7 +52,6 @@ class AccountCreationActivity: BaseActivity() {
             }
             else
             {
-                // Save data
                 writeSharedPref("lastName", lastNameAccount.text.toString())
                 writeSharedPref("firstName", firstNameAccount.text.toString())
                 writeSharedPref("email", emailAccount.text.toString())
@@ -68,18 +60,10 @@ class AccountCreationActivity: BaseActivity() {
                 writeSharedPref("city", cityAccount.text.toString())
                 writeSharedPref("cardRef", cardRefAccount.text.toString())
 
-                // Show home
-                //TODO: call HomeActivity
+                val newIntent = Intent(application, FragmentActivity::class.java)
+                startActivity(newIntent)
             }
         })
-
-        /*lastNameAccount.setText(readSharedPref("lastName"))
-        firstNameAccount.setText(readSharedPref("firstName"))
-        emailAccount.setText(readSharedPref("email"))
-        addressAccount.setText(readSharedPref("address"))
-        zipCodeAccount.setText(readSharedPref("zipCode"))
-        cityAccount.setText(readSharedPref("city"))
-        cardRefAccount.setText(readSharedPref("cardRef"))*/
     }
 
     fun writeSharedPref(key:String,value:String){
@@ -88,9 +72,4 @@ class AccountCreationActivity: BaseActivity() {
         editor.putString(key,value)
         editor.apply()
     }
-
-    /*fun readSharedPref(key:String):String{
-        val sharedPreferences: SharedPreferences = getSharedPreferences("account", Context.MODE_PRIVATE)
-        return sharedPreferences.getString(key,"not found").toString()
-    }*/
 }

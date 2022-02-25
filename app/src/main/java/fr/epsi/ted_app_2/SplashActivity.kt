@@ -17,10 +17,9 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
         val sharedPreferences: SharedPreferences = getSharedPreferences("account", Context.MODE_PRIVATE)
         Handler(Looper.getMainLooper()).postDelayed(Runnable {
-            //TODO: if sharedpreferences.contains("key") go to Home activity, else Main activity
+
             if (sharedPreferences.contains("lastName")) {
-                Log.d("test", "ça marche") // to remove
-                val newIntent=Intent(application, MainActivity::class.java) // to replace by HomeActivity
+                val newIntent=Intent(application, FragmentActivity::class.java) // to replace by HomeActivity
                 startActivity(newIntent)
                 finish()
             }
