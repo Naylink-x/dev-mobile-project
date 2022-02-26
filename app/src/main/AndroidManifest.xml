@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TED_APP_2">
         <activity
+            android:name=".OffersAdapter"
+            android:exported="false" />
+        <activity
             android:name=".AccountDetailActivity"
             android:exported="false" />
         <activity

@@ -33,7 +33,6 @@ class QrcodeScannerActivity: BaseActivity() {
 
     private fun codeScanner() {
         val scannerView = findViewById<CodeScannerView>(R.id.scannerView)
-        val scannerTextView = findViewById<TextView>(R.id.scannerTextView)
 
         val accountsList = arrayListOf<Account>()
         var count = -1
@@ -69,17 +68,8 @@ class QrcodeScannerActivity: BaseActivity() {
                         e.printStackTrace()
                     }
 
-                    //scannerTextView.text = it.text
-
                     val newIntent = Intent(applicationContext, AccountCreationActivity::class.java)
 
-                    /*newIntent.putExtra("lastName", accountsList[count].lastName)
-                    newIntent.putExtra("firstName", accountsList[count].firstName)
-                    newIntent.putExtra("email", accountsList[count].email)
-                    newIntent.putExtra("address", accountsList[count].address)
-                    newIntent.putExtra("zipCode", accountsList[count].zipCode)
-                    newIntent.putExtra("city", accountsList[count].city)
-                    newIntent.putExtra("cardRef", accountsList[count].cardRef)*/
                     newIntent.putExtra("accountObject", accountsList[count])
                     startActivity(newIntent)
                 }
