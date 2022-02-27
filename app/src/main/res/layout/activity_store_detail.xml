@@ -31,25 +31,22 @@
                 android:id="@+id/textViewStoreAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginHorizontal="20dp"
-                android:text="@string/storeAddress" />
+                android:text="@string/storeAddress"
+                style="@style/StoreDetailTextView" />
 
             <TextView
                 android:id="@+id/textViewStoreZipCodeCity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginHorizontal="20dp"
-                android:text="@string/storeZipCodeCity" />
+                android:text="@string/storeZipCodeCity"
+                style="@style/StoreDetailTextView" />
 
             <TextView
                 android:id="@+id/textViewStoreDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginHorizontal="20dp"
-                android:text="@string/storeDescription" />
+                android:text="@string/storeDescription"
+                style="@style/StoreDetailTextView" />
 
         </LinearLayout>
 

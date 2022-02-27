@@ -12,5 +12,14 @@
     <color name="light_purple">#77649b</color>
     <color name="header_color">#271549</color>
     <color name="orange">#e67233</color>
-    <color name="blue">#1b1f72</color>
+    <color name="blue1">#03045E</color>
+    <color name="blue10">#1C558E</color>
+    <color name="blue2">#023E8A</color>
+    <color name="blue3">#0077B6</color>
+    <color name="blue4">#0096C7</color>
+    <color name="blue5">#00B4D8</color>
+    <color name="blue6">#48CAE4</color>
+    <color name="blue7">#90E0EF</color>
+    <color name="blue8">#ADE8F4</color>
+    <color name="blue9">#CAF0F8</color>
 </resources>

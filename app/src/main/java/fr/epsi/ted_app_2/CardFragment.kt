@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 
+
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
@@ -46,6 +47,7 @@ class CardFragment : Fragment() {
         val textViewLastName = view.findViewById<TextView>(R.id.textViewLastName)
         val textViewFirstName = view.findViewById<TextView>(R.id.textViewFirstName)
         val textViewCardRef = view.findViewById<TextView>(R.id.textViewCardRef)
+
 
         textViewLastName.text = readSharedPref("lastName")
         textViewFirstName.text = readSharedPref("firstName")

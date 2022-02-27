@@ -26,17 +26,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:textSize="22sp"
-                    android:text="@string/last_name" />
+                    android:text="@string/last_name"
+                    style="@style/TextViewNameCardFragment"/>
 
                 <TextView
                     android:id="@+id/textViewFirstName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="10dp"
-                    android:textSize="22sp"
-                    android:text="@string/first_name" />
+                    android:layout_marginStart="@dimen/low_margin"
+                    android:text="@string/first_name"
+                    style="@style/TextViewNameCardFragment"/>
             </LinearLayout>
 
             <ImageView
@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="130dp"
+                android:layout_marginTop="100dp"
                 android:src="@drawable/barcode" />
 
             <TextView
@@ -53,8 +53,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:textSize="18sp"
-                android:text="@string/card_ref" />
+                android:text="@string/card_ref"
+                style="@style/TextViewCardRefCardFragment"/>
 
         </LinearLayout>
 

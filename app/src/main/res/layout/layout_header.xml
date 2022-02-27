@@ -4,20 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <RelativeLayout
-        android:background="@color/dark_blue"
         android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_height="60dp"
+        style="@style/HeaderStyleLayout">
 
         <TextView
             android:id="@+id/textViewTitle"
-            android:textSize="30sp"
-            android:textColor="@color/white"
-            android:layout_centerInParent="true"
-            android:ellipsize="marquee"
-            android:marqueeRepeatLimit="marquee_forever"
-            android:maxLines="1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            style="@style/HeaderStyleTextView"/>
 
         <ImageView
             android:id="@+id/imageViewLogo"
@@ -35,7 +30,7 @@
             android:layout_height="30dp"
             android:src="@drawable/img"
             android:visibility="gone"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="@dimen/low_margin"
             />
 
         <ImageView
@@ -46,7 +41,7 @@
             android:src="@drawable/account"
             android:visibility="gone"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="@dimen/low_margin"
             />
 
     </RelativeLayout>

@@ -28,7 +28,7 @@ class AccountDetailActivity : BaseActivity() {
         emailAccountChanges.setText(readSharedPref("email"))
         addressAccountChanges.setText(readSharedPref("address"))
         zipCodeAccountChanges.setText(readSharedPref("zipCode"))
-        cityAccountChanges.setText(readSharedPref("cardRef"))
+        cityAccountChanges.setText(readSharedPref("city"))
 
         buttonModifyAccount.setOnClickListener(View.OnClickListener {
             writeSharedPref("lastName", lastNameAccountChanges.text.toString())

@@ -8,22 +8,20 @@
         android:layout_height="60dp"
         android:orientation="horizontal">
         <TextView
-            style="@style/Tab"
             android:id="@+id/textViewCard"
-            android:background="@color/purple_700"
-            android:text="@string/card"/>
+            android:text="@string/card"
+            style="@style/TabBarFragment1Style"/>
 
         <TextView
-            style="@style/Tab"
+
             android:id="@+id/textViewOffers"
-            android:background="@color/purple_500"
-            android:text="@string/offers"/>
+            android:text="@string/offers"
+            style="@style/TabBarFragment2Style"/>
 
         <TextView
-            style="@style/Tab"
             android:id="@+id/textViewStores"
-            android:background="@color/purple_200"
-            android:text="@string/stores"/>
+            android:text="@string/stores"
+            style="@style/TabBarFragment3Style"/>
 
     </LinearLayout>
 

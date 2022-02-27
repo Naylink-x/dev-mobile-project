@@ -10,7 +10,8 @@
     <include
         layout="@layout/layout_header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_margin" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -25,71 +26,59 @@
             android:id="@+id/editTextAccountChangesLastName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:layout_marginHorizontal="20dp"
-            android:textSize="14sp"
             android:inputType="none"
             android:hint="@string/last_name"
-            android:autofillHints="lastName"/>
+            android:autofillHints="lastName"
+            style="@style/AccountEditText"/>
 
         <EditText
             android:id="@+id/editTextAccountChangesFirstName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginHorizontal="20dp"
-            android:textSize="14sp"
             android:inputType="none"
             android:hint="@string/first_name"
-            android:autofillHints="firstName"/>
+            android:autofillHints="firstName"
+            style="@style/AccountEditText"/>
 
         <EditText
             android:id="@+id/editTextAccountChangesEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginHorizontal="20dp"
-            android:textSize="14sp"
             android:inputType="textEmailAddress"
             android:hint="@string/email"
-            android:autofillHints="emailAddress"/>
+            android:autofillHints="emailAddress"
+            style="@style/AccountEditText"/>
 
         <EditText
             android:id="@+id/editTextAccountChangesAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginHorizontal="20dp"
-            android:textSize="14sp"
             android:inputType="none"
             android:hint="@string/address"
-            android:autofillHints="address"/>
+            android:autofillHints="address"
+            style="@style/AccountEditText"/>
 
         <EditText
             android:id="@+id/editTextAccountChangesZipCode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginHorizontal="20dp"
-            android:textSize="14sp"
             android:inputType="phone"
             android:hint="@string/zip_code"
-            android:autofillHints="zipCode"/>
+            android:autofillHints="zipCode"
+            style="@style/AccountEditText"/>
 
         <EditText
             android:id="@+id/editTextAccountChangesCity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginHorizontal="20dp"
-            android:textSize="14sp"
             android:inputType="none"
             android:hint="@string/city"
-            android:autofillHints="city"/>
+            android:autofillHints="city"
+            style="@style/AccountEditText"/>
 
             <Button
                 android:id="@+id/buttonModifyAccount"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="@dimen/high_margin"
                 android:text="@string/save_changes_button"
                 style="@style/ButtonCreateAccount"/>
 

@@ -15,7 +15,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="5dp">
             <ImageView
                 android:id="@+id/imageViewOffers"
                 android:layout_gravity="center_vertical"
