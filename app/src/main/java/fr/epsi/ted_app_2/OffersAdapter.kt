@@ -27,7 +27,7 @@ class OffersAdapter(val offers: ArrayList<Offer>): RecyclerView.Adapter<OffersAd
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.activity_offers_adapter, viewGroup, false)
+            .inflate(R.layout.cell_offers, viewGroup, false)
         return ViewHolder(viewGroup.context, view)
     }
 

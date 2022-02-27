@@ -72,14 +72,14 @@ class OffersFragment : Fragment() {
                 val data = response.body?.string()
 
                 if (data != null) {
-                    val jsProducts = JSONObject(data)
-                    val jsArrayProducts = jsProducts.getJSONArray("items")
-                    for (i in 0 until jsArrayProducts.length()) {
-                        val jsProduct = jsArrayProducts.getJSONObject(i)
+                    val jsOffers = JSONObject(data)
+                    val jsArrayOffers = jsOffers.getJSONArray("items")
+                    for (i in 0 until jsArrayOffers.length()) {
+                        val jsOffer = jsArrayOffers.getJSONObject(i)
                         val offer = Offer(
-                            jsProduct.optString("name", ""),
-                            jsProduct.optString("description", ""),
-                            jsProduct.optString("picture_url", "")
+                            jsOffer.optString("name", ""),
+                            jsOffer.optString("description", ""),
+                            jsOffer.optString("picture_url", "")
                         )
                         offers.add(offer)
                     }

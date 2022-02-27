@@ -31,7 +31,10 @@
     <string name="card">Carte</string>
     <string name="offers">Offres</string>
     <string name="stores">Magasins</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    
+    <!-- Détails des magasins -->
+    <string name="storeAddress">Adresse</string>
+    <string name="storeZipCodeCity">Code postal - Ville</string>
+    <string name="storeDescription">Description :</string>
 
 </resources>

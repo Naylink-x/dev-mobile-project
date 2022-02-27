@@ -5,6 +5,7 @@ import android.text.TextUtils
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import org.w3c.dom.Text
 
@@ -30,7 +31,9 @@ open class BaseActivity: AppCompatActivity(){
 
     fun setHeaderImage() {
         val imageViewLogo = findViewById<ImageView>(R.id.imageViewLogo)
+        val textViewTitle = findViewById<TextView>(R.id.textViewTitle)
         imageViewLogo.visibility = View.VISIBLE
+        textViewTitle.visibility = View.GONE
     }
 
     fun setAccountDetail() {
@@ -41,5 +44,9 @@ open class BaseActivity: AppCompatActivity(){
             val newIntent = Intent(application, AccountDetailActivity::class.java)
             startActivity(newIntent)
         })
+    }
+
+    fun showToast(txt: String) {
+        Toast.makeText(this, txt,Toast.LENGTH_SHORT).show()
     }
 }

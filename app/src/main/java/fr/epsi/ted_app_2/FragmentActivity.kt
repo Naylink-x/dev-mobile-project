@@ -8,7 +8,6 @@ class FragmentActivity: BaseActivity() {
 
     val cardFragment = CardFragment.newInstance("", "")
     val offersFragment = OffersFragment.newInstance("", "")
-    val storesFragment = StoresFragment.newInstance("", "")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,7 +56,7 @@ class FragmentActivity: BaseActivity() {
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.setReorderingAllowed(true)
         fragmentTransaction.addToBackStack("StoresFragment")
-        fragmentTransaction.replace(R.id.fragment_container, storesFragment, null)
+        fragmentTransaction.replace(R.id.fragment_container, MapsFragment::class.java, null)
         fragmentTransaction.commit()
     }
 
