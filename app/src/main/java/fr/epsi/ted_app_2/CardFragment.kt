@@ -2,12 +2,20 @@ package fr.epsi.ted_app_2
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import androidx.annotation.ColorInt
+import androidx.core.content.res.ResourcesCompat.getColor
+import com.google.zxing.BarcodeFormat
+import com.google.zxing.oned.Code128Writer
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -46,12 +54,86 @@ class CardFragment : Fragment() {
 
         val textViewLastName = view.findViewById<TextView>(R.id.textViewLastName)
         val textViewFirstName = view.findViewById<TextView>(R.id.textViewFirstName)
-        val textViewCardRef = view.findViewById<TextView>(R.id.textViewCardRef)
+        val textViewCardRef = readSharedPref("cardRef")
 
 
         textViewLastName.text = readSharedPref("lastName")
         textViewFirstName.text = readSharedPref("firstName")
-        textViewCardRef.text = readSharedPref("cardRef")
+        displayBitmap(textViewCardRef)
+    }
+
+    // Source : https://github.com/TheKamranUllah/Perfect_Barcode_Generator_Code_128
+    private fun createBarcodeBitmap(
+        barcodeValue: String,
+        @ColorInt barcodeColor: Int,
+        @ColorInt backgroundColor: Int,
+        widthPixels: Int,
+        heightPixels: Int
+    ): Bitmap {
+
+        try{
+
+            val bitMatrix = Code128Writer().encode(
+                barcodeValue,
+                BarcodeFormat.CODE_128,
+                widthPixels,
+                heightPixels
+            )
+
+            val pixels = IntArray(bitMatrix.width * bitMatrix.height)
+            for (y in 0 until bitMatrix.height) {
+                val offset = y * bitMatrix.width
+                for (x in 0 until bitMatrix.width) {
+                    pixels[offset + x] =
+                        if (bitMatrix.get(x, y)) barcodeColor else backgroundColor
+                }
+            }
+
+            bitmap = Bitmap.createBitmap(
+                bitMatrix.width,
+                bitMatrix.height,
+                Bitmap.Config.ARGB_8888
+            )
+            bitmap.setPixels(
+                pixels,
+                0,
+                bitMatrix.width,
+                0,
+                0,
+                bitMatrix.width,
+                bitMatrix.height
+            )
+
+        } catch (e: Exception) {
+            Toast.makeText(context, e.message, Toast.LENGTH_LONG).show()
+        }
+        catch (e: NullPointerException)
+        {
+            Toast.makeText(context, e.message, Toast.LENGTH_LONG).show()
+            bitmap  = BitmapFactory.decodeResource(context?.resources,R.drawable.ic_launcher_foreground)
+            return bitmap
+        }
+        return bitmap
+    }
+
+    // Source : https://github.com/TheKamranUllah/Perfect_Barcode_Generator_Code_128
+    private fun displayBitmap(value: String) {
+
+        val widthPixels = resources.getDimensionPixelSize(R.dimen.width_barcode)
+        val heightPixels = resources.getDimensionPixelSize(R.dimen.height_barcode)
+        val imageViewBarcode = view?.findViewById<ImageView>(R.id.imageViewBarcode)
+        val textViewCardRef = view?.findViewById<TextView>(R.id.textViewCardRef)
+
+        bitmap =  createBarcodeBitmap(
+            barcodeValue = value,
+            barcodeColor = getColor(resources, R.color.black,null),
+            backgroundColor = getColor(resources, R.color.white, null),
+            widthPixels = widthPixels,
+            heightPixels = heightPixels
+        )
+        imageViewBarcode?.setImageBitmap(bitmap)
+
+        textViewCardRef?.text = value
     }
 
     fun readSharedPref(key:String):String{
@@ -80,5 +162,7 @@ class CardFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+
+        lateinit var bitmap: Bitmap
     }
 }

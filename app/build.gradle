@@ -6,7 +6,7 @@ plugins {
 android {
     signingConfigs {
         config {
-            storeFile file('C:\\Users\\Romain\\AndroidStudioProjects\\dev-mobile-project\\keystore.jks')
+            storeFile file('..\\keystore.jks')
             storePassword 'tedapp'
             keyAlias 'ted_app_2'
             keyPassword 'tedapp'

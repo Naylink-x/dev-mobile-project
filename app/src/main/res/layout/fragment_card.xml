@@ -11,7 +11,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <LinearLayout
@@ -41,12 +41,12 @@
 
             <ImageView
                 android:id="@+id/imageViewBarcode"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/width_barcode"
+                android:layout_height="@dimen/height_barcode"
                 android:adjustViewBounds="true"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="100dp"
-                android:src="@drawable/barcode" />
+                android:contentDescription="@string/barcode_image_description" />
 
             <TextView
                 android:id="@+id/textViewCardRef"
